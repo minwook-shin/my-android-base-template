@@ -1,4 +1,4 @@
-package io.github.minwookshin.myandroidbasetemplate.Common
+package io.github.minwookShin.myAndroidBaseTemplate.Common
 
 import android.app.Activity
 import org.jetbrains.anko.longToast

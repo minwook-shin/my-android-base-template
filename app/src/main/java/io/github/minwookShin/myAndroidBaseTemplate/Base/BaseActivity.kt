@@ -1,4 +1,4 @@
-package io.github.minwookshin.myandroidbasetemplate.Base
+package io.github.minwookShin.myAndroidBaseTemplate.Base
 
 import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity

@@ -1,12 +1,13 @@
 package io.github.minwookShin.myAndroidBaseTemplate.ViewModel
 
 import android.databinding.ObservableField
-import io.github.minwookShin.myAndroidBaseTemplate.Model.Test
+import io.github.minwookShin.myAndroidBaseTemplate.Model.TestModel
 
 
-class TestViewModel{
-    private val testText = Test()
-    val observableValue = ObservableField<String>(testText.text)
+open class MainViewModel{
+    private val testText = TestModel()
+    open val observableValue = ObservableField<String>(testText.text)
+
     fun addText(){
         observableValue.set("add text!")
     }

@@ -1,10 +1,9 @@
-package io.github.minwookshin.myandroidbasetemplate
+package io.github.minwookShin.myAndroidBaseTemplate
 
 import android.annotation.SuppressLint
 import android.app.Application
-import io.github.minwookshin.myandroidbasetemplate.Common.AppSharedPreferences
+import io.github.minwookShin.myAndroidBaseTemplate.Common.AppSharedPreferences
 
-@SuppressLint("Registered")
 class App : Application(){
     init {
         INSTANCE = this
