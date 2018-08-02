@@ -2,6 +2,7 @@ package io.github.minwookShin.myAndroidBaseTemplate
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.content.Intent
 import io.github.minwookShin.myAndroidBaseTemplate.Common.AppSharedPreferences
 
 class App : Application(){
@@ -10,7 +11,7 @@ class App : Application(){
     }
 
     override fun onCreate() {
-        prefs = AppSharedPreferences(applicationContext)
+        startService(Intent(App.INSTANCE.applicationContext,AppService::class.java))
         super.onCreate()
     }
 
