@@ -7,10 +7,7 @@
         <import type="android.view.View"/>
         <variable
             name="constants"
-            type="io.github.minwookShin.myAndroidBaseTemplate.Dialog.HorizontalDialog"/>
-        <variable
-            name="mode"
-            type="Integer" />
+            type="io.github.minwookShin.myAndroidBaseTemplate.Dialog.RoundDialog"/>
         <variable
             name="title"
             type="String" />
@@ -18,11 +15,8 @@
             name="massage"
             type="String" />
         <variable
-            name="okay"
-            type="String" />
-        <variable
-            name="cancel"
-            type="String" />
+            name="items"
+            type="java.util.HashMap&lt;String,String&gt;"/>
     </data>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -61,44 +55,18 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-
                 <RelativeLayout
-                    android:visibility="@{mode != constants.MODE_OK ? View.VISIBLE:View.GONE}"
-                    android:id="@+id/cancel_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/dialog_button">
+                    android:layout_marginBottom="8dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:layout_marginBottom="8dp"
-                        android:text="@{cancel}"
-                        android:textSize="14sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/okay_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/dialog_button">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:layout_marginBottom="8dp"
-                        android:text="@{okay}"
-                        android:textSize="14sp" />
+                        app:roundItem = "@{items}"
+                        app:flexWrap="wrap">
+                    </com.google.android.flexbox.FlexboxLayout>
 
                 </RelativeLayout>
             </LinearLayout>

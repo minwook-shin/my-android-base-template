@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import io.github.minwookShin.myAndroidBaseTemplate.Base.BaseActivity
 import io.github.minwookShin.myAndroidBaseTemplate.Dialog.HorizontalDialog
+import io.github.minwookShin.myAndroidBaseTemplate.Dialog.RoundDialog
 import io.github.minwookShin.myAndroidBaseTemplate.Dialog.VerticalDialog
 import io.github.minwookShin.myAndroidBaseTemplate.R
 import io.github.minwookShin.myAndroidBaseTemplate.ViewModel.MainViewModel
@@ -18,7 +19,13 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         bind
         connectViewModel()
-        makeVerticalDialog()
+        val item = HashMap<String, String>()
+        item["T1"] = "팀1"
+        item["T2"] = "팀2"
+        item["T3"] = "팀3"
+        item["T4"] = "팀4"
+
+        makeRoundDialog(item)
     }
 
     private fun connectViewModel(){
@@ -41,6 +48,15 @@ class MainActivity : BaseActivity() {
                 .setMassage("메시지")
                 .setOkayButton("예")
                 .setCancelButton("아니오")
+                .show()
+    }
+
+    private fun makeRoundDialog(item:HashMap<String,String>){
+        RoundDialog.Builder(this)
+                .setMode(HorizontalDialog.MODE_OK_CANCEL)
+                .setTitle("제목")
+                .setMassage("메시지")
+                .setItems(item)
                 .show()
     }
 }
