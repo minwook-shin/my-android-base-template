@@ -7,7 +7,7 @@
         <import type="android.view.View"/>
         <variable
             name="constants"
-            type="io.github.minwookShin.myAndroidBaseTemplate.Dialog.HorizontalDialog"/>
+            type="io.github.minwookShin.myAndroidBaseTemplate.Dialog.VerticalDialog"/>
         <variable
             name="mode"
             type="Integer" />
@@ -59,7 +59,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
 
                 <RelativeLayout
@@ -97,8 +97,8 @@
                         android:layout_marginBottom="8dp"
                         android:text="@{okay}"
                         android:textSize="14sp" />
-
                 </RelativeLayout>
+
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
