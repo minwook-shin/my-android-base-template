@@ -9,6 +9,6 @@ object BindingAdapter {
     @BindingAdapter("text")
     @JvmStatic
     fun setText(view: TextView, text: String) {
-        view.text = text+text
+        view.text = text
     }
 }
