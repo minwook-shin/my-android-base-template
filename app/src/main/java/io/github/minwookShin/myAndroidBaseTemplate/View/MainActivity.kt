@@ -1,31 +1,71 @@
 package io.github.minwookShin.myAndroidBaseTemplate.View
 
+import android.annotation.SuppressLint
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.Fragment
+import android.support.v7.widget.Toolbar
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import io.github.minwookShin.myAndroidBaseTemplate.Base.BaseActivity
 import io.github.minwookShin.myAndroidBaseTemplate.Dialog.HorizontalDialog
 import io.github.minwookShin.myAndroidBaseTemplate.Dialog.RoundDialog
 import io.github.minwookShin.myAndroidBaseTemplate.Dialog.VerticalDialog
 import io.github.minwookShin.myAndroidBaseTemplate.R
+import io.github.minwookShin.myAndroidBaseTemplate.R.layout.fragment_a
+import io.github.minwookShin.myAndroidBaseTemplate.View.Fragment.FragmentA
+import io.github.minwookShin.myAndroidBaseTemplate.View.Fragment.FragmentB
+import io.github.minwookShin.myAndroidBaseTemplate.View.Fragment.FragmentC
 import io.github.minwookShin.myAndroidBaseTemplate.ViewModel.MainViewModel
 import io.github.minwookShin.myAndroidBaseTemplate.databinding.ActivityMainBinding
+import org.jetbrains.anko.longToast
 
 
-class MainActivity : BaseActivity() {
-
+class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private val bind by lazy{ DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bind
         connectViewModel()
+        val fragmentA = FragmentA()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragmentA).commit()
         val item = HashMap<String, String>()
         item["T1"] = "팀1"
         item["T2"] = "팀2"
         item["T3"] = "팀3"
         item["T4"] = "팀4"
+        setSupportActionBar(bind.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false);
+        makeHorizontalDialog()
 
-        makeRoundDialog(item)
+
+        val bottomNavigationView = findViewById<View>(R.id.navigation_view) as BottomNavigationView
+        bottomNavigationView.setOnNavigationItemSelectedListener(this)
+    }
+
+    override fun onNavigationItemSelected(p0: MenuItem): Boolean {
+        when(p0.itemId){
+            R.id.navigation_a ->{
+                longToast("A!!")
+                val fragmentA = FragmentA()
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragmentA).commit()
+            }
+            R.id.navigation_b -> {
+                longToast("B!!")
+                val fragmentB = FragmentB()
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragmentB).commit()
+            }
+            R.id.navigation_c -> {
+                longToast("C!!")
+                val fragmentC = FragmentC()
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragmentC).commit()
+            }
+
+        }
+        return true
     }
 
     private fun connectViewModel(){
