@@ -1,20 +1,14 @@
 package io.github.minwookShin.myAndroidBaseTemplate.View
 
-import android.annotation.SuppressLint
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
-import android.support.v4.app.Fragment
-import android.support.v7.widget.Toolbar
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import io.github.minwookShin.myAndroidBaseTemplate.Base.BaseActivity
 import io.github.minwookShin.myAndroidBaseTemplate.Dialog.HorizontalDialog
-import io.github.minwookShin.myAndroidBaseTemplate.Dialog.RoundDialog
 import io.github.minwookShin.myAndroidBaseTemplate.Dialog.VerticalDialog
 import io.github.minwookShin.myAndroidBaseTemplate.R
-import io.github.minwookShin.myAndroidBaseTemplate.R.layout.fragment_a
 import io.github.minwookShin.myAndroidBaseTemplate.View.Fragment.FragmentA
 import io.github.minwookShin.myAndroidBaseTemplate.View.Fragment.FragmentB
 import io.github.minwookShin.myAndroidBaseTemplate.View.Fragment.FragmentC
@@ -88,15 +82,6 @@ class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelect
                 .setMassage("메시지")
                 .setOkayButton("예")
                 .setCancelButton("아니오")
-                .show()
-    }
-
-    private fun makeRoundDialog(item:HashMap<String,String>){
-        RoundDialog.Builder(this)
-                .setMode(HorizontalDialog.MODE_OK_CANCEL)
-                .setTitle("제목")
-                .setMassage("메시지")
-                .setItems(item)
                 .show()
     }
 }

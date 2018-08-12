@@ -28,8 +28,8 @@ class VerticalDialog(context:Context) : Dialog(context), View.OnClickListener{
         super.onCreate(savedInstanceState)
 
         setCanceledOnTouchOutside(false)
-        window.setBackgroundDrawable(ColorDrawable())
-        window.setDimAmount(0.0f)
+        window?.setBackgroundDrawable(ColorDrawable())
+        window?.setDimAmount(0.0f)
         bind.mode = this.mode
         bind.title = this.title
         bind.massage = this.msg

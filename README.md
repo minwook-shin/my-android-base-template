@@ -11,12 +11,8 @@ WIP
 
 ## Dependency
 
-* Kotlin-android-extensions
+* Anko
 
-* kotlin-kapt
+* swipereveallayout
 
-* Data Binding
-
-* Anko-commons
-
-* flexbox
+* glide
