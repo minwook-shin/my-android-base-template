@@ -3,7 +3,7 @@ My Android project base template.
 
 ## Design Pattern
 
-MVVM
+MVVM Pattern
 
 ## Class Description
 
