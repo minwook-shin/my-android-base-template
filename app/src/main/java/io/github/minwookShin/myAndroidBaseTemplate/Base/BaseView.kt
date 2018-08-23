@@ -1,8 +1,8 @@
 package io.github.minwookShin.myAndroidBaseTemplate.Base
 
 import android.content.Context
-import android.support.constraint.ConstraintLayout
 import android.util.AttributeSet
+import androidx.constraintlayout.widget.ConstraintLayout
 
 open class BaseView: ConstraintLayout {
     constructor(context: Context?) : super(context)
