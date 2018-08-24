@@ -39,15 +39,13 @@ class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelect
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        connectViewModel()
         val fragmentA = AFragment()
         supportFragmentManager.beginTransaction().add(R.id.fragment_container,fragmentA).commit()
 
         val bottomNavigationView = findViewById<View>(R.id.navigation_view) as BottomNavigationView
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
     }
-    private fun connectViewModel(){
-    }
+
 }
 
 

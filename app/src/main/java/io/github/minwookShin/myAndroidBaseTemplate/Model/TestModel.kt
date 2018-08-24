@@ -1,3 +1,7 @@
 package io.github.minwookShin.myAndroidBaseTemplate.Model
 
-data class TestModel(var text : String = "null")
+import androidx.lifecycle.MutableLiveData
+
+data class TestModel(
+        val Notifier: MutableLiveData<Int> = MutableLiveData()
+)

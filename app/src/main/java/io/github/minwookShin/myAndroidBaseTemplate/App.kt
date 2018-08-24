@@ -12,6 +12,7 @@ class App : Application(){
 
     override fun onCreate() {
         startService(Intent(App.INSTANCE.applicationContext,AppService::class.java))
+        prefs = AppSharedPreferences(applicationContext)
         super.onCreate()
     }
 
