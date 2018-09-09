@@ -4,33 +4,20 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ViewModel
-import io.github.minwookShin.myAndroidBaseTemplate.App
 import io.github.minwookShin.myAndroidBaseTemplate.Model.TestModel
-import org.jetbrains.anko.longToast
 
 
-open class MainViewModel : ViewModel(),LifecycleObserver{
-    private var count = 0
+open class MainViewModel(private var count: Int = 0) : ViewModel(),LifecycleObserver{
     val model = TestModel()
     fun increment() {
         model.Notifier.value = ++count
     }
 
-    private fun saveValue(){
-        App.prefs.save = count.toString()
-    }
-
-    private fun restoreValue(){
-        count = App.prefs.save.toString().toInt()
-    }
-
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun resume(){
-        saveValue()
-    }
+        if (count != 0){
+            increment()
+        }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    fun pause(){
-        restoreValue()
     }
 }

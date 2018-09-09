@@ -12,7 +12,6 @@ import io.github.minwookShin.myAndroidBaseTemplate.ViewModel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_a.*
 
 class AFragment : BaseFragment(){
-
     private val viewModel by lazy { ViewModelProviders.of(this).get(MainViewModel::class.java) }
 
     private val observer = Observer<Int> {
@@ -25,7 +24,6 @@ class AFragment : BaseFragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        lifecycle.addObserver(viewModel)
         connectViewModel()
         clickEvent()
     }
@@ -38,6 +36,7 @@ class AFragment : BaseFragment(){
 
     private fun connectViewModel(){
         viewModel.model.Notifier.observe(this,observer)
+        lifecycle.addObserver(viewModel)
     }
 
     private fun printCount(value: Int) {
