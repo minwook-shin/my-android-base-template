@@ -1,4 +1,4 @@
-package io.github.minwookShin.myAndroidBaseTemplate.View.Fragment
+package io.github.minwookshin.myAndroidBaseTemplate.view.Fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import io.github.minwookShin.myAndroidBaseTemplate.Base.BaseFragment
-import io.github.minwookShin.myAndroidBaseTemplate.R
-import io.github.minwookShin.myAndroidBaseTemplate.ViewModel.MainViewModel
+import io.github.minwookshin.myAndroidBaseTemplate.base.BaseFragment
+import io.github.minwookshin.myAndroidBaseTemplate.R
+import io.github.minwookshin.myAndroidBaseTemplate.viewModel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_a.*
 
 class AFragment : BaseFragment(){

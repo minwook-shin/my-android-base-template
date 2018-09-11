@@ -1,4 +1,4 @@
-package io.github.minwookShin.myAndroidBaseTemplate.Base
+package io.github.minwookshin.myAndroidBaseTemplate.base
 
 import android.content.Context
 import android.util.AttributeSet

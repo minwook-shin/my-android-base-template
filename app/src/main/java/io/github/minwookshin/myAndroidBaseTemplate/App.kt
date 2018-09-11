@@ -1,8 +1,8 @@
-package io.github.minwookShin.myAndroidBaseTemplate
+package io.github.minwookshin.myAndroidBaseTemplate
 
 import android.app.Application
 import android.content.Intent
-import io.github.minwookShin.myAndroidBaseTemplate.Common.AppSharedPreferences
+import io.github.minwookshin.myAndroidBaseTemplate.common.AppSharedPreferences
 
 class App : Application(){
     init {

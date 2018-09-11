@@ -1,14 +1,14 @@
-package io.github.minwookShin.myAndroidBaseTemplate.View
+package io.github.minwookshin.myAndroidBaseTemplate.view
 
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import io.github.minwookShin.myAndroidBaseTemplate.Base.BaseActivity
-import io.github.minwookShin.myAndroidBaseTemplate.R
-import io.github.minwookShin.myAndroidBaseTemplate.View.Fragment.AFragment
-import io.github.minwookShin.myAndroidBaseTemplate.View.Fragment.BFragment
-import io.github.minwookShin.myAndroidBaseTemplate.View.Fragment.CFragment
+import io.github.minwookshin.myAndroidBaseTemplate.base.BaseActivity
+import io.github.minwookshin.myAndroidBaseTemplate.R
+import io.github.minwookshin.myAndroidBaseTemplate.view.Fragment.AFragment
+import io.github.minwookshin.myAndroidBaseTemplate.view.Fragment.BFragment
+import io.github.minwookshin.myAndroidBaseTemplate.view.Fragment.CFragment
 import org.jetbrains.anko.longToast
 
 

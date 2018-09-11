@@ -1,4 +1,4 @@
-package io.github.minwookShin.myAndroidBaseTemplate.Common
+package io.github.minwookshin.myAndroidBaseTemplate.common
 
 import android.content.SharedPreferences
 import android.content.Context

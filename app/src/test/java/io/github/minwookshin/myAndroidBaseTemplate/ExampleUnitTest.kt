@@ -1,4 +1,4 @@
-package io.github.minwookShin.myAndroidBaseTemplate
+package io.github.minwookshin.myAndroidBaseTemplate
 
 import org.junit.Test
 

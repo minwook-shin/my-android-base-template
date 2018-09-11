@@ -1,4 +1,4 @@
-package io.github.minwookShin.myAndroidBaseTemplate.Model
+package io.github.minwookshin.myAndroidBaseTemplate.model
 
 import androidx.lifecycle.MutableLiveData
 
